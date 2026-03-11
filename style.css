@@ -4,11 +4,64 @@ padding:0;
 box-sizing:border-box;
 }
 
+/* …seu CSS existente… */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* header row with logo and hamburger */
+  .nav-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  /* mobile menu hidden by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  /* when navbar has .open, show items */
+  nav.open ul {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px; /* enough to show all items */
+  }
+
+  nav a {
+    display: block;
+    padding: 10px 0;
+  }
+}
+  
+
+
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
 
 body{
 
 font-family: 'Inter', sans-serif;
-
+margin:0;
+  padding:0;
 background:#0f172a;
 color:#e5e7eb;
 
@@ -45,26 +98,47 @@ z-index:-1;
 nav{
 
 display:flex;
-justify-content:space-between;
+
 align-items:center;
 
-padding:20px 40px;
+justify-content: space-between;
+
+padding:20px 15px;
 
 background:#0f172a;
 
 position:sticky;
+
 top:0;
 
 z-index:1000;
 
 }
 
-nav ul{
+#menu-btn {
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
 
-display:flex;
-gap:20px;
-list-style:none;
+/* hide button on larger screens */
+@media (min-width: 769px) {
+  #menu-btn { display: none; }
+}
 
+@media (min-width: 769px) {
+  nav ul{
+    display:flex;
+    gap:10px;
+    list-style:none;
+  }
+}
+nav h2{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 5px;
 }
 
 nav a{
@@ -100,7 +174,7 @@ header{
 
 text-align:center;
 
-padding:auto 20 auto 20;
+
 
 border-bottom:1px solid #1e293b;
 
@@ -108,7 +182,7 @@ border-bottom:1px solid #1e293b;
 
 header h1{
 
-font-family: "Space Grotesk";
+font-family: 'Times New Roman', Times, serif;
 
 font-size:42px;
 
@@ -180,6 +254,7 @@ gap:25px;
 
 }
 
+
 .card img{
 
 width:100%;
@@ -193,6 +268,8 @@ margin-bottom:10px;
 .card a{
 
 display:inline-block;
+
+text-decoration: none;
 
 margin-top:10px;
 
@@ -214,9 +291,14 @@ margin-bottom:60px;
 
 }
 
+span{
+
+    color: white;
+}
+
 main  h2 {
 
-font-family: "JetBrains Mono";
+font-family: 'Courier New', Courier, monospace;
 
 color: #3b82f6;;
 
@@ -226,7 +308,7 @@ font-weight:600;
 
 backdrop-filter: blur(12px);
 
-padding: 5px 100px 5px 8px;
+padding: 5px 100px 5px 10px;
 
 border-radius: 10px;
 
@@ -247,7 +329,7 @@ display:flex;
 
 flex-wrap:wrap;
 
-gap:10px;
+gap:7px;
 
 list-style:none;
 
@@ -286,7 +368,9 @@ transform:translateY(-5px);
 border:1px solid #3b82f6;
 
 }
-
+p a {
+    color: white;
+}
 footer{
 
 text-align:center;

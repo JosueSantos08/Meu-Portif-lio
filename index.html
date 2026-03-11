@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Josué Bispo | Portfólio</title>
+<title>Josué Santos | Portfólio</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Sriracha&display=swap');
@@ -28,10 +30,11 @@
 <body>
     
     <nav>
-
-<h2 class="logo">Josué</h2>
-
-<ul>
+      <div class="nav-header">
+        <h2 class="logo">Josué Santos</h2>
+        <button id="menu-btn" aria-label="Abrir menu">☰</button>
+      </div>
+      <ul>
 
 <li><a href="#sobre">Sobre</a></li>
 <li><a href="#skills">Skills</a></li>
@@ -44,7 +47,7 @@
 
 <header>
 
-<h1>Josué Bispo</h1>
+<h1>Josué Santos</h1>
 
 <p>
 <span id="typing"></span>
@@ -57,20 +60,23 @@
 
 <section id="sobre" data-aos="fade-up">
 
-<h2>Sobre mim</h2>
+<h2>Sobre <span>mim</span></h2>
 
 <p>
-Sou estudante de tecnologia da informação com conhecimentos em
-HTML, CSS, JavaScript, Python e suporte técnico.
-Busco desenvolver minhas habilidades e construir projetos
-que demonstrem minha evolução na área de tecnologia.
+Sou estudante de Tecnologia da Informação e atualmente estou em formação na área de suporte técnico e desenvolvimento. Tenho conhecimentos em HTML, CSS, JavaScript e Python, além de noções de análise de dados e ferramentas como Power BI. Gosto de entender como a tecnologia funciona por trás das soluções e estou sempre buscando aprender novas habilidades que me permitam evoluir na área.
+</p>
+
+<p>Tenho interesse especial em desenvolvimento web, infraestrutura de TI e cibersegurança. Ao longo da minha jornada de aprendizado, venho desenvolvendo projetos práticos para fortalecer minhas habilidades e construir um portfólio que demonstre minha evolução técnica e minha capacidade de resolver problemas.</p>
+<p>
+Meu objetivo é conquistar uma oportunidade na área de tecnologia onde eu possa continuar aprendendo, contribuir com soluções e crescer profissionalmente. Acredito que dedicação, curiosidade e prática constante são fundamentais para evoluir no mundo da tecnologia.
+
 </p>
 
 </section>
 
 <section id="skills" data-aos="fade-right">
 
-<h2>Habilidades</h2>
+<h2>Hard <span>Skills</span></h2>
 
 <ul>
 
@@ -91,7 +97,7 @@ que demonstrem minha evolução na área de tecnologia.
 </section>
 <section id="projetos" data-aos="fade-left">
 
-<h2>Projetos</h2>
+<h2>Meus <span>Projetos</span></h2>
 
 <div class="projetos-grid">
 
@@ -123,32 +129,43 @@ Script Python para automação de tarefas repetitivas.
 
 </div>
 
+<div class="card">
+
+
+
+<h3>Landing Page Responsiva</h3>
+
+<p style="margin-top: 10px;">
+Landing page moderna feita com HTML, CSS e JavaScript.
+</p>
+
+<a href="#">Ver projeto</a>
+
+</div>
+
 </div>
 
 </section>
 
 <section id="projetos" data-aos="fade-left">
 
-<h2>Projetos</h2>
+<h2>Meus <span>Certificados</span></h2>
 
-<div class="card">
+<div class="projetos-grid">
 
-<h3>Landing Page Responsiva</h3>
+  <div class="card">
+    <h3>Senai</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur  ab minus rerum labore impedit reiciendis sed! Accusamus, labore quidem.
+    </p>
+  </div>
 
-<p>
-Projeto desenvolvido utilizando HTML, CSS e JavaScript com foco em
-responsividade e design moderno.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Automação em Python</h3>
-
-<p>
-Script desenvolvido em Python para automatizar tarefas repetitivas.
-</p>
+  <div class="card">
+    <h3>Cisco</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium odio minus esse aliquid culpa quia 
+    </p>
+  </div>
 
 </div>
 
@@ -202,9 +219,11 @@ Script desenvolvido em Python para automatizar tarefas repetitivas.
 
 <footer>
 
-<p>© 2026 Josué Bispo</p>
+<p>© 2026 Josué Santos</p>
 
 </footer>
+
+
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -262,5 +281,14 @@ move: { enable: true, speed: 2 }
 
 </script>
 <script src="jsdapg.js"></script>
+
+<!-- mobile menu toggle -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const nav = document.querySelector('nav');
+  menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
 </body>
 </html>
